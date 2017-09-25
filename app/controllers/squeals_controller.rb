@@ -7,6 +7,7 @@ class SquealsController < ApplicationController
   # GET /squeals.json
   def index
     @squeals = Squeal.all
+    @squeal = Squeal.new
   end
 
   # GET /squeals/1

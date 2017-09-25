@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @squeal.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @squeal.user %>
+</p>
+
+<%= link_to 'Edit', edit_squeal_path(@squeal) %> |
+<%= link_to 'Back', squeals_path %>

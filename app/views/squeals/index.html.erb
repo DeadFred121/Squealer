@@ -15,7 +15,7 @@
     <% @squeals.each do |squeal| %>
       <tr>
         <td><%= squeal.content %></td>
-        <td><%= squeal.user %></td>
+        <td><%= squeal.user.email %></td>
         <td><%= link_to 'Show', squeal %></td>
         <td><%= link_to 'Edit', edit_squeal_path(squeal) %></td>
         <td><%= link_to 'Destroy', squeal, method: :delete, data: { confirm: 'Are you sure?' } %></td>

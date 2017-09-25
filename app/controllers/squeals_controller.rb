@@ -1,4 +1,6 @@
 class SquealsController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_squeal, only: [:show, :edit, :update, :destroy]
 
   # GET /squeals
@@ -25,7 +27,7 @@ class SquealsController < ApplicationController
   # POST /squeals.json
   def create
     @squeal = Squeal.new(squeal_params)
-
+    @squeal.user_id = current_user.id
     respond_to do |format|
       if @squeal.save
         format.html { redirect_to @squeal, notice: 'Squeal was successfully created.' }

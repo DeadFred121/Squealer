@@ -1,4 +1,6 @@
 class SquealsController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_squeal, only: [:show, :edit, :update, :destroy]
 
   # GET /squeals
